@@ -1,0 +1,47 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#user" routerLink="/user">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#post" routerLink="/post">Post</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+   
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+<!-- <div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-primary" (click)="Goster()">Göster</button>
+      <button class="btn btn-danger ms-2" (click)="Gizle()">Gizle</button>
+      <button class="btn btn-warning ms-2" (click)="GosterGizle()">Göster - Gizle</button>
+      <div class="alert alert-info mt-3" *ngIf="islem">
+        Akdeniz
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container mt-5">
+  <div class="col-4">
+    <ul class="list-group">
+      <h3>Seçili Gün: <b>{{secGun}}</b> </h3>
+      <li class="list-group-item" *ngFor="let gun of gunler" (click)="GunBelirle(gun)" style="cursor: pointer;" [ngClass]="{'active' : secGun==gun}">{{gun}}</li>
+    </ul>
+  </div>
+</div> -->
