@@ -1,19 +1,74 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "adsoyad": "egeadmin",
+      "mail": "ege0730@gmail.com",
+      "admin": "1",
+      "parola": "123"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "adsoyad": "ege",
+      "mail": "turgutege007@gmail.com",
+      "admin": "0",
+      "parola": "123"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "houses": [
+    { 
+      "id": 1,
+      "tipi": "Satılık",
+      "kat": "2",
+      "boyut": "45",
+      "mahalle": "Sarısu",
+      "odasayi": "2",
+      "fiyat": "1885000"
+    },
+    { 
+      "id": 2,
+      "tipi": "Satılık",
+      "kat": "1",
+      "boyut": "200",
+      "mahalle": "Gelemiş",
+      "odasayi": "5",
+      "fiyat": "5900000"
+    },
+    { 
+      "id": 3,
+      "tipi": "Satılık",
+      "kat": "3",
+      "boyut": "220",
+      "mahalle": "Kuzeyyaka",
+      "odasayi": "5",
+      "fiyat": "2385000"
+    },
+    { 
+      "id": 4,
+      "tipi": "Kiralık",
+      "kat": "1",
+      "boyut": "100",
+      "mahalle": "Şirinyalı",
+      "odasayi": "3",
+      "fiyat": "21000"
+    },
+    { 
+      "id": 5,
+      "tipi": "Kiralık",
+      "kat": "10",
+      "boyut": "72",
+      "mahalle": "Ünsal",
+      "odasayi": "2",
+      "fiyat": "7000"
+    },
+    {
+      "id": 6,
+      "tipi": "Kiralık",
+      "kat": "1",
+      "boyut": "110",
+      "mahalle": "Bayındır",
+      "odasayi": "3",
+      "fiyat": "22000"
+    }
+  ]
 }
