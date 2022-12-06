@@ -1,2 +1,7 @@
-export class UyeClass {
-}
+export class Uye {
+    id!: number;
+    adsoyad!: string;
+    mail!: string;
+    parola!: string;
+    admin!: number;
+  }
