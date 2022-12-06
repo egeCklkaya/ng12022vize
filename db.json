@@ -18,7 +18,7 @@
   "types": [
     {
       "id": 1,
-      "adi": "Satilik"
+      "adi": "Satılık"
     },
     {
       "id": 2,
@@ -26,50 +26,50 @@
     }
   ],
   "houses": [
-    { 
+    {
       "id": 1,
       "tipi": "Satılık",
       "kat": "2",
       "boyut": "45",
       "mahalle": "Sarısu",
       "odasayi": "2",
-      "fiyat": "1885000"
+      "fiyat": "1.885.000"
     },
-    { 
+    {
       "id": 2,
       "tipi": "Satılık",
       "kat": "1",
       "boyut": "200",
       "mahalle": "Gelemiş",
       "odasayi": "5",
-      "fiyat": "5900000"
+      "fiyat": "5.900.000"
     },
-    { 
+    {
       "id": 3,
       "tipi": "Satılık",
       "kat": "3",
       "boyut": "220",
       "mahalle": "Kuzeyyaka",
       "odasayi": "5",
-      "fiyat": "2385000"
+      "fiyat": "2.385.000"
     },
-    { 
+    {
       "id": 4,
       "tipi": "Kiralık",
       "kat": "1",
       "boyut": "100",
       "mahalle": "Şirinyalı",
       "odasayi": "3",
-      "fiyat": "21000"
+      "fiyat": "21.000"
     },
-    { 
+    {
       "id": 5,
       "tipi": "Kiralık",
       "kat": "10",
       "boyut": "72",
       "mahalle": "Ünsal",
       "odasayi": "2",
-      "fiyat": "7000"
+      "fiyat": "7.000"
     },
     {
       "id": 6,
@@ -78,7 +78,7 @@
       "boyut": "110",
       "mahalle": "Bayındır",
       "odasayi": "3",
-      "fiyat": "22000"
+      "fiyat": "22.000"
     }
   ]
 }

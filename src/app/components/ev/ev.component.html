@@ -16,6 +16,7 @@
         <thead>
           <th>Id</th>
           <th>Ev Fiyatı</th>
+          <th>Mahalle</th>
           <th>Düzenle</th>
           <th>Sil</th>
         </thead>
@@ -23,6 +24,7 @@
           <tr *ngFor="let ev of evler">
             <td>{{ev.id}}</td>
             <td>{{ev.fiyat}}</td>
+            <td>{{ev.mahalle}}</td>
             <td><button class="btn btn-outline-warning" (click)="Duzenle(ev,modalEkleDuzenle)"
                 [disabled]="servis.aktifUye.admin==0">Düzenle</button></td>
             <td><button class="btn btn-outline-danger" (click)="Sil(ev,modalSil)"
@@ -47,14 +49,16 @@
           <div class="form-group">
             <label>Ev fiyatı</label>
             <input type="text" class="form-control" formControlName="fiyat">
+            <label>Emlak Tipi</label>
+            <input type="text" class="form-control" formControlName="tipi">
+            <label>Ev Katı</label>
+            <input type="text" class="form-control" formControlName="kat">
+            <label>Ev Boyutu</label>
+            <input type="text" class="form-control" formControlName="boyut">
             <label>Ev Konumu</label>
             <input type="text" class="form-control" formControlName="mahalle">
-            <label>Tipi</label>
-            <select class="form-control" formControlName="categoryId">
-              <option [value]="tip.id" *ngFor="let tip of tipler">{{tip.adi}}</option>
-            </select>
-            <input type="hidden" class="form-control" formControlName="id">
-
+            <label>Oda Sayısı</label>
+            <input type="text" class="form-control" formControlName="odasayi">
           </div>
 
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { Ev } from 'src/app/models/Ev';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,10 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HomeComponent implements OnInit {
   islem: boolean = false;
+
   
   ackapa: boolean = false;
-  
-  gunler: Array<string> = ["Pazartesi", "Salı", "Çarşamba"]
-  secGun: string = "Gün Seçiniz";
+
   constructor(
     public servis: DataService
   ) { }
@@ -20,17 +20,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-Goster() {
-  this.islem = true;
-}
-Gizle() {
-  this.islem = false;
-}
 GosterGizle() {
   this.islem = !this.islem;
-}
 
+}
 
 
 
