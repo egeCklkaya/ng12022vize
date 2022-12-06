@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { UyeComponent } from './components/uye/uye.component';
 import { LoginComponent } from './components/login/login.component';
 import { EvComponent } from './components/ev/ev.component';
+import { TipComponent } from './components/tip/tip.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path: 'ev',
     component: EvComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'tip',
+    component: TipComponent,
     canActivate: [AuthGuard]
   }
 ];

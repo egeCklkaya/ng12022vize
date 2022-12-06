@@ -1,3 +1,4 @@
+import { Tip } from './../models/Tip';
 import { Ev } from './../models/Ev';
 import { Uye } from './../models/Uye';
 import { Injectable } from '@angular/core';
@@ -12,7 +13,6 @@ export class DataService {
   constructor(
     public http: HttpClient
   ) { }
-  /* kategori servis başla*/
 
   OturumAc(mail: string, parola: string) {
     return this.http.get<Uye[]>(this.apiUrl + "users?mail=" + mail + "&parola=" + parola);
@@ -31,6 +31,23 @@ export class DataService {
       var admin = localStorage.getItem("admin") || "0";
       this.aktifUye.admin = parseInt(admin);
     }
+  }
+
+  
+  TipListele() {
+    return this.http.get<Tip[]>(this.apiUrl + "types");
+  }
+  TipById(id: number) {
+    return this.http.get<Tip>(this.apiUrl + "types/" + id);
+  }
+  TipEkle(tip: Tip) {
+    return this.http.post(this.apiUrl + "types/", tip);
+  }
+  TipDuzenle(tip: Tip) {
+    return this.http.put(this.apiUrl + "types/" + tip.id, tip);
+  }
+  TipSil(id: number) {
+    return this.http.delete(this.apiUrl + "types/" + id);
   }
 
   UyeListele() {
@@ -52,6 +69,9 @@ export class DataService {
 
   EvListele() {
     return this.http.get<Ev[]>(this.apiUrl + "houses");
+  }
+  EvListeleByTipId(TipId: number) {
+    return this.http.get<Tip[]>(this.apiUrl + "categories/" + TipId + "/lessons");
   }
   EvById(id: number) {
     return this.http.get<Ev>(this.apiUrl + "houses/" + id);

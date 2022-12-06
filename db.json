@@ -15,6 +15,16 @@
       "parola": "123"
     }
   ],
+  "types": [
+    {
+      "id": 1,
+      "adi": "Satilik"
+    },
+    {
+      "id": 2,
+      "adi": "Kiralık"
+    }
+  ],
   "houses": [
     { 
       "id": 1,

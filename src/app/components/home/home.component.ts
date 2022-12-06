@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,16 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  ad: string = "Akdeniz";
-  sayi: number = 10;
-
   islem: boolean = false;
   
   ackapa: boolean = false;
   
   gunler: Array<string> = ["Pazartesi", "Salı", "Çarşamba"]
   secGun: string = "Gün Seçiniz";
-  constructor() { }
+  constructor(
+    public servis: DataService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -31,9 +31,8 @@ GosterGizle() {
   this.islem = !this.islem;
 }
 
-GunBelirle(g: string) {
-  this.secGun = g;
-}
+
+
 
 
 

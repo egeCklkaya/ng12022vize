@@ -1,31 +1,24 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-8">
-      <h3>Evler</h3>
-
-      <select class="form-control" [(ngModel)]="tipId" (ngModelChange)="TipSec($event)">
-        <option [value]="tip.id" *ngFor="let tip of tipler">{{tip.adi}}</option>
-      </select>
-
-      <button class="btn btn-outline-primary mt-3" (click)="Ekle(modalEkleDuzenle)"
-        [disabled]="servis.aktifUye.admin==0">Ev Ekle</button>
-      <p *ngIf="tipId!=0">
-        Seçili Tip : <b>{{secTip.adi}}</b>
-      </p>
+      <h3>Emlak Tipleri</h3>
+      <button class="btn btn-outline-primary" (click)="Ekle(modalEkleDuzenle)"
+        [disabled]="servis.aktifUye.admin==0">Tip Ekle</button>
       <table class="table table-hover mt-3">
         <thead>
           <th>Id</th>
-          <th>Ev Fiyatı</th>
+          <th>Tip Adı</th>
+          <th>Dersler</th>
           <th>Düzenle</th>
           <th>Sil</th>
         </thead>
         <tbody>
-          <tr *ngFor="let ev of evler">
-            <td>{{ev.id}}</td>
-            <td>{{ev.fiyat}}</td>
-            <td><button class="btn btn-outline-warning" (click)="Duzenle(ev,modalEkleDuzenle)"
+          <tr *ngFor="let tip of tipler">
+            <td>{{tip.id}}</td>
+            <td>{{tip.adi}}</td>
+            <td><button class=" btn btn-outline-warning" (click)="Duzenle(tip,modalEkleDuzenle)"
                 [disabled]="servis.aktifUye.admin==0">Düzenle</button></td>
-            <td><button class="btn btn-outline-danger" (click)="Sil(ev,modalSil)"
+            <td><button class="btn btn-outline-danger" (click)="Sil(tip,modalSil)"
                 [disabled]="servis.aktifUye.admin==0">Sil</button></td>
           </tr>
         </tbody>
@@ -36,7 +29,7 @@
 
 <div class="modal" tabindex="-1" #modalEkleDuzenle>
   <div class="modal-dialog">
-    <form [formGroup]="frm" (ngSubmit)="EvEkleDuzenle()">
+    <form [formGroup]="frm" (ngSubmit)="TipEkleDuzenle()">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
           <h5 class="modal-title">{{modalBaslik}}</h5>
@@ -45,14 +38,8 @@
         <div class="modal-body">
 
           <div class="form-group">
-            <label>Ev fiyatı</label>
-            <input type="text" class="form-control" formControlName="fiyat">
-            <label>Ev Konumu</label>
-            <input type="text" class="form-control" formControlName="mahalle">
-            <label>Tipi</label>
-            <select class="form-control" formControlName="categoryId">
-              <option [value]="tip.id" *ngFor="let tip of tipler">{{tip.adi}}</option>
-            </select>
+            <label>Tip Adı</label>
+            <input type="text" class="form-control" formControlName="adi">
             <input type="hidden" class="form-control" formControlName="id">
 
           </div>
@@ -75,11 +62,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h6 *ngIf="secEv">{{secEv.fiyat}} adlı Ev Silinecektir Onaylıyor musunuz?</h6>
+        <h6 *ngIf="secTip">{{secTip.adi}} adlı Emlak Tipi Silinecektir Onaylıyor musunuz?</h6>
       </div>
       <div class="modal-footer">
 
-        <button class="btn btn-outline-danger" *ngIf="secEv" (click)="EvSil()">Sil</button>
+        <button class="btn btn-outline-danger" *ngIf="secTip" (click)="TipSil()">Sil</button>
         <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Kapat</button>
       </div>
     </div>

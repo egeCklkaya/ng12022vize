@@ -6,4 +6,4 @@ export class Ev {
     mahalle!: string;
     odasayi!: string;
     fiyat!: number;
-  }
+  } 
