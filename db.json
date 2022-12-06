@@ -3,14 +3,14 @@
     {
       "id": 1,
       "adsoyad": "egeadmin",
-      "mail": "ege0730@gmail.com",
+      "mail": "a",
       "admin": "1",
       "parola": "123"
     },
     {
       "id": 2,
       "adsoyad": "ege",
-      "mail": "turgutege007@gmail.com",
+      "mail": "b",
       "admin": "0",
       "parola": "123"
     }

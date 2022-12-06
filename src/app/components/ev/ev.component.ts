@@ -60,18 +60,18 @@ export class EvComponent implements OnInit {
       categoryId: this.tipId
     });
     this.modal = new bootstrap.Modal(el);
-    this.modalBaslik = "Ders Ekle";
+    this.modalBaslik = "Ev Ekle";
     this.modal.show();
   }
   Duzenle(ev: Ev, el: HTMLElement) {
     this.frm.patchValue(ev);
-    this.modalBaslik = "Ders Düzenle";
+    this.modalBaslik = "Ev Düzenle";
     this.modal = new bootstrap.Modal(el);
     this.modal.show();
   }
   Sil(ev: Ev, el: HTMLElement) {
     this.secEv = ev;
-    this.modalBaslik = "Ders Sil";
+    this.modalBaslik = "Ev Sil";
     this.modal = new bootstrap.Modal(el);
     this.modal.show();
   }
